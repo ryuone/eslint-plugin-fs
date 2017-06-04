@@ -1,0 +1,36 @@
+{
+  "name": "eslint-plugin-fs",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "babel ./src --out-dir ./dist --copy-files",
+    "lint": "eslint ./src ./tests",
+    "test": "mocha --compilers js:babel-register ./tests/rules/index.js",
+    "flow": "flow",
+    "prettier-eslint": "prettier-eslint --write --prettier.single-quote --prettier.trailing-comma all --prettier.print-width 160 --prettier.bracketSpacing true \"./src/**/*.js\"",
+    "flow-typed": "flow-typed"
+  },
+  "author": "",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-flow": "^6.23.0",
+    "eslint-config-canonical": "^8.2.1",
+    "eslint-plugin-flowtype": "^2.34.0",
+    "flow-bin": "^0.47.0",
+    "flow-typed": "^2.1.2",
+    "mocha": "^3.4.2",
+    "prettier": "^1.4.1",
+    "prettier-eslint": "^6.2.3",
+    "prettier-eslint-cli": "^4.0.2"
+  },
+  "peerDependencies": {
+    "eslint": ">=3.0.0"
+  },
+  "engines": {
+    "node": ">=6"
+  }
+}
